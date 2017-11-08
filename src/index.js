@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
@@ -8,5 +9,12 @@ import App from './App';
 
 axios.defaults.baseURL = 'https://github-11e53.firebaseio.com/';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const app = (
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
+
+ReactDOM.render( app ,
+  document.getElementById('root'));
 registerServiceWorker();
