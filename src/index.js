@@ -8,8 +8,8 @@ import App from './App';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-import reducer from './store/reducer';
-const store = createStore(reducer);
+import burgerBuilderReducer from './store/reducers/burgerBuilder';
+const store = createStore(burgerBuilderReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 axios.defaults.baseURL = 'https://github-11e53.firebaseio.com/';
 
